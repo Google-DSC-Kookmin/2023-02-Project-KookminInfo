@@ -1,0 +1,10 @@
+*** 이미지 OCR 리딩을 위해 설치 필요.
+Install Tesseract:
+On Windows:
+You can download the Tesseract installer from the official Tesseract GitHub page and follow the installation instructions for Windows.
+On macOS:
+brew install tesseract
+On Linux (Ubuntu/Debian):
+sudo apt-get install tesseract-ocr
+
+
