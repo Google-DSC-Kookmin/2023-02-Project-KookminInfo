@@ -1,0 +1,5 @@
+1. master 브랜치는 최종 배포용이다.
+2. 새로운 기능 추가시 feature 브랜치로 checkout 해서 작업한다.
+3. feature 브랜치에서 작업이 끝나면 리드에게 development 브랜치로 merging request 한다.
+4. 리드가 확인 후 development 브랜치에 새로운 기능을 병합한다.
+5. 신규 기능들이 모두 병합되고 정상 작동될시 master 브랜치로 합치고, 배포한다.
