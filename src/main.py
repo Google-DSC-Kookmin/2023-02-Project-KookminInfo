@@ -6,7 +6,7 @@ client = pymongo.MongoClient("mongodb://localhost:27017/")  # Update with your M
 db = client["kookmin_news"]  # Replace "kookmin_news" with your database name
 collection = db["posts"]
 
-def save_to_mongodb(url):
+def crawlAndSave(url):
     # Get data from crawling
     post_data_list = scrape_kookmin_news(url)
 
@@ -30,6 +30,6 @@ def check_saved_data():
 
 if __name__ == "__main__":
     url = 'https://www.kookmin.ac.kr/user/kmuNews/notice/7/index.do'
-    save_to_mongodb(url)
+    crawlAndSave(url)
     check_saved_data()
     print("saving complete")
