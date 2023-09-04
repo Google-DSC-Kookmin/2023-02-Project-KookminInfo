@@ -8,3 +8,4 @@ On Linux (Ubuntu/Debian):
 sudo apt-get install tesseract-ocr
 
 
+
