@@ -1,0 +1,24 @@
+version: '3'
+services:
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"  # Map host port 27017 to container port 27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root  # Set MongoDB root username
+      MONGO_INITDB_ROOT_PASSWORD: root  # Set MongoDB root password
+    volumes:
+      - ./data/db:/data/db  # Mount a volume to persist MongoDB data
+  flask-app:
+    build:
+      context: .
+      dockerfile: Dockerfile  # Specify the path to your Dockerfile
+    ports:
+      - "5001:5001"  # Map host port 5001 to container port 5001
+    environment:
+      - TESSDATA_PREFIX=/usr/share/tesseract-ocr/5/tessdata/
+    volumes:
+      - ./data:/app/data  # Mount a volume for data if needed
+    depends_on:
+      - mongodb  # Add this if your Flask app depends on MongoDB
+
