@@ -1,0 +1,23 @@
+name: Docker Build and Push
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Login to Docker Hub
+      run: docker login -u ${{ secrets.DOCKER_ID }} -p ${{ secrets.DOCKERHUB_ACCESSTOKEN }}
+
+    - name: Build Docker image
+      run: docker build -t crawlapp:latest .
+
+    - name: Push Docker image
+      run: docker push crawlapp:latest
