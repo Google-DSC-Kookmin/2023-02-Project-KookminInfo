@@ -20,5 +20,5 @@ jobs:
       run: docker build -t crawlapp:latest .
 
     - name: Push Docker image
-      run: docker push dkaykorea/crawlapp:tagname
+      run: docker push dkaykorea/crawlapp:latest
 
