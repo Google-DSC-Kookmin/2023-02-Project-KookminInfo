@@ -7,5 +7,6 @@ brew install tesseract
 On Linux (Ubuntu/Debian):
 sudo apt-get install tesseract-ocr
 
+test for github Actions
 
 
