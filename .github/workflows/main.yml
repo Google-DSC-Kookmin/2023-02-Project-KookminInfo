@@ -23,8 +23,8 @@ jobs:
         docker login -u ${{ secrets.DOCKER_ID }} -p ${{ secrets.DOCKERHUB_ACCESSTOKEN }}
 
     - name: Build Docker image
-      run: docker build -t crawlapp:latest .
+      run: docker build -t dkaykorea/crawlapp:latest .
 
     - name: Push Docker image
-      run: docker push crawlapp:latest
+      run: docker push dkaykorea/crawlapp:latest
 
